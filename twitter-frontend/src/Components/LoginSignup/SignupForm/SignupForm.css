@@ -1,0 +1,51 @@
+/* Form */
+.signup-form{
+    align-items: flex-end;
+}
+
+.signup-form form {
+
+    width: 100%;
+    height: 74%;
+    
+    margin: 0 1.875rem;
+    padding: 1.875rem 2.5rem;
+
+}
+
+.signup-form img {
+    width: 2.5rem;
+    align-self: center;
+}
+
+/* Button */
+
+.signup-button {
+    margin-top: 1.438rem;
+    margin-bottom: 4.25rem;
+}
+
+
+/* Policy */
+.signup-form .policy {
+    align-self: flex-start;
+    width: 60%;
+    padding-left: 1.25rem;
+}
+
+.signup-form .policy p,
+.signup-form .policy a,
+.signup-form .policy Link{
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.signup-form .policy a,
+.signup-form .policy Link{
+    color: #1E97E1;
+}
+

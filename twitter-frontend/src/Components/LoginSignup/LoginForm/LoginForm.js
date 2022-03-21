@@ -1,7 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
-import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom"
+
+import logo from '../../../Assets/Logo/twitter-logo-4.svg'
+import { Link } from 'react-router-dom'
+
+import'./LoginForm.css'
 
 const LoginForm = () => {
     
@@ -34,14 +39,18 @@ const LoginForm = () => {
     }
 
     return (
-        <div>
+        <div className='login-form'>
 
             <form onSubmit={handleSubmit}>
                 
+            <img src={logo} alt="Twitter Logo" />
+
+            <h2>Log in to Twitter</h2>
+
                 <div>
                     <label>
-                        Username
                         <input 
+                            placeholder='Username'
                             type='text' 
                             name='username'
                             value={username} 
@@ -52,9 +61,9 @@ const LoginForm = () => {
 
                 <div>
                     <label>
-                        Password
                         <input 
-                            type='text' 
+                            placeholder='Password'
+                            type='password' 
                             name='password'
                             value={password} 
                             onChange = {(e) => setPassword(e.target.value)}
@@ -63,7 +72,12 @@ const LoginForm = () => {
                 </div>
 
                 <div>
-                    <button type='submit'>Log In</button>
+                    <button className = "button login-button" type='submit'>Log In</button>
+                </div>
+
+                <div className='login-links'>
+                    <a href="#"> Forgot password? </a>
+                    <Link to="/signup"> Sign up to Twitter </Link>
                 </div>
 
             </form>

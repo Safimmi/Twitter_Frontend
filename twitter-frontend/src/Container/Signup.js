@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-import SingupForm from '../Components/LoginSingup/SingupForm/SingupForm'
-import Footer from '../Components/LoginSingup/Footer/Footer'
+import SignupForm from '../Components/LoginSignup/SignupForm/SignupForm'
+import Footer from '../Components/LoginSignup/Footer/Footer'
 
 import "./Styles/Registry.css"
 
-export default class Singup extends Component {
+export default class Signup extends Component {
     render() {
         return (
             <div className='registry-container'>
@@ -17,7 +17,7 @@ export default class Singup extends Component {
                     </div>
 
                     <div className='registry-form-wrap'>
-                        <SingupForm></SingupForm>                    
+                        <SignupForm></SignupForm>                    
                     </div>
 
                 </div>

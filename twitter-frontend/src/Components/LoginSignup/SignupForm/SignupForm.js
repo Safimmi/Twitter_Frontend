@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
-import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom"
 
 import logo from '../../../Assets/Logo/twitter-logo-4.svg'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-import './SingupForm.css'
+import './SignupForm.css'
 
-const SingupForm = () => {
+const SignupForm = () => {
 
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
@@ -21,7 +21,7 @@ const SingupForm = () => {
         const userInfo = {name, username, password}
 
         axios({
-            url: window.apiPath + "/singup",
+            url: window.apiPath + "/signup",
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ const SingupForm = () => {
             setUsername('')
             setPassword('')
             
-            // history.push('/login')
+            //history.push('/login')
         })
         .catch(err => {
             console.log(err.message)
@@ -44,9 +44,9 @@ const SingupForm = () => {
     }
 
     return (
-        <div className='singup-form'>
+        <div className='signup-form'>
 
-            <form id = "singup-form-id" onSubmit={handleSubmit}>
+            <form id = "signup-form-id" onSubmit={handleSubmit}>
                 
                 <img src={logo} alt="Twitter Logo" />
 
@@ -89,12 +89,12 @@ const SingupForm = () => {
                 </div>
 
                 <div>
-                    <button className = "button singup-button" type='submit'>Next</button>
+                    <button className = "button signup-button" type='submit'>Next</button>
                 </div>
 
                 <div className='policy'>
                     <p>
-                        By singing up you agree to the 
+                        By Signing up you agree to the 
                         <a href="#"> Terms of Service </a>
                         and
                         <a href="#"> Privacy Policy</a>
@@ -115,4 +115,4 @@ const SingupForm = () => {
     )
 }
 
-export default SingupForm
+export default SignupForm

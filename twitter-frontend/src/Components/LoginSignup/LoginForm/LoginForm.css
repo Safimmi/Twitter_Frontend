@@ -1,0 +1,50 @@
+/* Form */
+
+.login-form{
+    align-items: center;
+}
+
+.login-form form{
+    
+    justify-content: center;
+
+    width: 100%;
+    height: 74%;
+    
+    margin: 0;
+    padding-left: 9.375rem;
+    padding-right: 12.875rem;
+
+}
+
+.login-form img {
+    width: 3.125rem;
+    align-self: flex-start;
+}
+
+/* Button */
+
+.login-button {
+    margin-top: 1.125rem;
+    margin-bottom:2.5rem;
+}
+
+/* Links */
+
+.login-links{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: brown; */
+}
+
+.login-links a,
+.login-links Link{
+
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.09px;
+
+    color: #1E97E1;
+}

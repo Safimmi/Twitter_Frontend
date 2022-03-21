@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 
-import Singup from "./Container/Singup";
+import Signup from "./Container/Signup";
 import Login from "./Container/Login";
 import Home from "./Container/Home";
 
@@ -27,8 +27,8 @@ function App() {
             <Login></Login>
           </Route>
 
-          <Route exact path = "/singup">
-            <Singup></Singup>
+          <Route exact path = "/signup">
+            <Signup></Signup>
           </Route>
 
         </Switch>

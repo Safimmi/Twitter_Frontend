@@ -1,17 +1,31 @@
 import React, { Component } from 'react'
-import LogoutButton from '../Components/LogoutButton'
 
-import LoginForm from '../Components/LoginSingup/LoginForm'
+import Footer from '../Components/LoginSignup/Footer/Footer'
+import LoginForm from '../Components/LoginSignup/LoginForm/LoginForm'
 
+
+import "./Styles/Registry.css"
 
 export default class Login extends Component {
 
     render() {
         return (
-        <div>
-            <h1>LOGIN PAGE</h1>
-            <LoginForm></LoginForm>
-            <LogoutButton></LogoutButton>
+            <div className='registry-container'>
+                
+            <div className='registry-wrap'>
+
+                <div className='side-image'>
+                    <img src={require("../Assets/Images/back-twitter.png")} alt="back-twitter"></img> 
+                </div>
+
+                <div className='registry-form-wrap'>
+                    <LoginForm></LoginForm>                    
+                </div>
+
+            </div>
+
+            <Footer ></Footer>
+            
         </div>
         )
     }

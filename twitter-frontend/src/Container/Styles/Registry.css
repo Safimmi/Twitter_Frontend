@@ -1,3 +1,5 @@
+/* Wraps/Containers */
+
 .registry-container {
     display: block;
     height: 100vh;
@@ -25,5 +27,111 @@ img {
     align-items: flex-center;
     width: 46vw;
 }
+
+/* Form */
+
+.signup-form,
+.login-form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* background-color: palevioletred; */
+}
+
+.signup-form form,
+.login-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* background-color: paleturquoise; */
+}
+
+.signup-form img, 
+.login-form img {
+    height: auto;
+    margin-bottom: 2.688rem;
+}
+
+.signup-form h2,
+.login-form h2{
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+    
+    margin-bottom: 2.188rem;
+    align-self: flex-start;
+    /* background-color: papayawhip; */
+}
+
+.signup-form form div,
+.login-form form div{
+    width: 100%;
+    /* background-color: peachpuff; */
+}
+.signup-form input,
+.login-form input{
+
+    border: 1px solid #cccccc;
+    border-radius:6px;
+
+    width: 100%;
+    height: 4.375rem;
+
+    margin-bottom: 1.563rem;
+    
+}
+
+.signup-form input[type='text'], 
+.signup-form input[type='password'],
+.signup-form input::-webkit-input-placeholder,
+.login-form input[type='text'], 
+.login-form input[type='password'],
+.login-form input::-webkit-input-placeholder {
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.09px;
+    color: #292929;
+    text-indent: 20px;
+    
+}
+
+/* Button */
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 3.75rem;
+    
+    border-radius: 4.75rem;
+    
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.94px;
+    color: #FFFFFF;
+}
+
+.signup-button,
+.login-button {
+    background: #1da1f2;
+    transition: all .2s ease;
+}
+
+.signup-button:hover,
+.login-button:hover {
+    background: #32b1ff;
+}
+
+
 
 
