@@ -3,8 +3,10 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from "react-router-dom";
 
-import logo from '../../Assets/Logo/twitter-logo-4.svg'
+import logo from '../../../Assets/Logo/twitter-logo-4.svg'
 import { Link } from 'react-router-dom';
+
+import './SingupForm.css'
 
 const SingupForm = () => {
 
@@ -17,6 +19,7 @@ const SingupForm = () => {
     const handleSubmit = (e) =>{
         e.preventDefault()
         const userInfo = {name, username, password}
+
         axios({
             url: window.apiPath + "/singup",
             method: 'POST',
@@ -28,7 +31,12 @@ const SingupForm = () => {
         })
         .then(response => {
             console.log(response)
-            history.push('/login')
+            
+            setName('')
+            setUsername('')
+            setPassword('')
+            
+            // history.push('/login')
         })
         .catch(err => {
             console.log(err.message)
@@ -38,7 +46,7 @@ const SingupForm = () => {
     return (
         <div className='singup-form'>
 
-            <form onSubmit={handleSubmit}>
+            <form id = "singup-form-id" onSubmit={handleSubmit}>
                 
                 <img src={logo} alt="Twitter Logo" />
 

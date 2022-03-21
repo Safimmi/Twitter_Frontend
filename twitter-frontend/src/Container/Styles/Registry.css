@@ -1,0 +1,29 @@
+.registry-container {
+    display: block;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.registry-wrap{
+    display: flex;
+    height: 95.5vh;
+    /* background-color: tomato; */
+}
+
+.side-image{
+    width: 54vw;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.registry-form-wrap{
+    display: flex;
+    align-items: flex-center;
+    width: 46vw;
+}
+
+

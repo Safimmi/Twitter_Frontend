@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
 
-import SingupForm from '../Components/LoginSingup/SingupForm'
-import Footer from '../Components/LoginSingup/Footer'
+import SingupForm from '../Components/LoginSingup/SingupForm/SingupForm'
+import Footer from '../Components/LoginSingup/Footer/Footer'
 
-import "../Components/LoginSingup/Singup.css"
+import "./Styles/Registry.css"
 
 export default class Singup extends Component {
     render() {
         return (
-            <div className='singup-container'>
+            <div className='registry-container'>
                 
-                <div className='singup-wrap'>
+                <div className='registry-wrap'>
 
                     <div className='side-image'>
                         <img src={require("../Assets/Images/back-twitter.png")} alt="back-twitter"></img> 
                     </div>
 
-                    <div className='singup-form-wrap'>
+                    <div className='registry-form-wrap'>
                         <SingupForm></SingupForm>                    
                     </div>
 
