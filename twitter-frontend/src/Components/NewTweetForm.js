@@ -47,7 +47,7 @@ class NewTweetForm extends Component {
         .then(response => {
             console.log(response)
             console.log(response.data)
-        }) 
+        })
     }
 
     render() {

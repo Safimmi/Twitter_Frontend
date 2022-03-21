@@ -1,7 +1,11 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+
 import Singup from "./Container/Singup";
 import Login from "./Container/Login";
 import Home from "./Container/Home";

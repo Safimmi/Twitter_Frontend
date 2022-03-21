@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
+    useHistory
+} from "react-router-dom";
 
-class SingupForm extends Component {
-
+class LoginForm extends Component {
+    
     constructor(props) {
         super(props)
         
         this.state = {
-            name: '',
             username: '',
             password: ''
         }
     }
-
 
     handleChange = (e) => {
         this.setState({
@@ -21,34 +26,33 @@ class SingupForm extends Component {
     }
 
     handleSubmit = (e) => {
+
+        
+        let history = useHistory();
         console.log(this.state)
         e.preventDefault()
-        axios.post('http://localhost:8881/singup', this.state)
+        axios.post(
+            'http://localhost:8881/login',
+            this.state,
+            { withCredentials: true }
+        )
         .then(response => {
             console.log(response)
+            console.log(response.headers)
+            //history.go("/")
         }) 
     }
 
+    
     render() {
 
-        const {name, username, password} = this.state
+        const {username, password} = this.state
 
         return (
         <div>
+            
             <form onSubmit={this.handleSubmit}>
                 
-                <div>
-                    <label>
-                        Name
-                        <input 
-                            type='text' 
-                            name='name'
-                            value={name} 
-                            onChange = {this.handleChange}
-                        />
-                    </label>
-                </div>
-
                 <div>
                     <label>
                         Username
@@ -82,6 +86,7 @@ class SingupForm extends Component {
         </div>
         )
     }
+
 }
 
-export default SingupForm
+export default LoginForm

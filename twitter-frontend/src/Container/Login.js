@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import LoginForm from '../Components/LoginForm'
 import LogoutButton from '../Components/LogoutButton'
+
+import LoginForm from '../Components/LoginSingup/LoginForm'
+
 
 export default class Login extends Component {
 
