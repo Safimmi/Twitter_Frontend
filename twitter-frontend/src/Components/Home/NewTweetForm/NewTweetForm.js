@@ -33,6 +33,7 @@ const NewTweetForm = () => {
             console.log(response)
             setText('')
             setImage('')
+            window.location.reload()
         })
         .catch(err => {
             console.log(err.message)

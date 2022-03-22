@@ -75,6 +75,30 @@ const Tweet = ({tweet, activeUserId}) => {
         
     }
 
+    const handleDelete = (e) => {
+        e.preventDefault()
+        if(activeUserId === tweet.user.id){
+            axios({
+                url: window.apiPath + `/tweets/${tweetId}`,
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                withCredentials: true
+            })
+            .then(response => {
+                console.log(response)    
+                window.location.reload()
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+        }else{console.log("You can not delete this tweet")}
+        
+    }
+
+    const handleUpdate = (e) => {}
+
     return (
         <div className='tweet-container'>
 
@@ -123,8 +147,8 @@ const Tweet = ({tweet, activeUserId}) => {
                         <OptionsIcon className='tweet-action-icon'/>
                     </button>
                     <div className="options-content">
-                        <a href="#">Delete</a>
-                        <a href="#">Edit</a>
+                        <a onClick={handleDelete}>Delete</a>
+                        <a onClick={handleUpdate}>Edit</a>
                     </div>
                 </div>
             </div>
