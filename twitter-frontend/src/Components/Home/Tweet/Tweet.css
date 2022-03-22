@@ -1,0 +1,183 @@
+.tweet-container{
+    display: flex;
+    width: 100%;
+    padding-top: 1.875rem;
+    background-color: #FFFFFF ;
+    border: 1.5px solid #E6E6E6;
+}
+
+/* profile-picture */
+
+.profile-picture{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-left: 1.563rem;
+    padding-right: 0.938rem;
+}
+
+.profile-picture img{
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 50%;
+}
+
+/* Tweet Content */
+
+.tweet-content{
+    flex-grow: 1;
+    padding-top: 0.25rem;
+}
+
+/* Twet Info */
+
+.tweet-content .tweet-info {
+
+}
+
+.tweet-info .tweet-user{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 0.313rem;
+    padding-bottom: 0.313rem;
+}
+
+.tweet-info h3 {
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+.tweet-info h4 {
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21.09px;
+    color: #666666;
+}
+
+.tweet-info p {
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.09px;
+    color: #000000;
+}
+
+.tweet-info .tweet-img{
+    height: 28.313rem;
+    margin-top: 0.938rem;
+}
+
+.tweet-info .tweet-img img {
+    border-radius: 1.563rem;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Tweet Actions */
+
+.tweet-content .tweet-actions{
+    display: flex;
+    justify-content: flex-start;
+    gap:7.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.25rem;
+}
+
+.tweet-actions .tweet-actions-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.766rem;
+    
+}
+
+.tweet-action-icon{
+    height: 1.234rem;
+    width: auto;
+    fill: #536471;
+}
+
+.tweet-actions .comment-icon:hover,
+.tweet-actions .share-icon:hover {
+    fill: #1DA1F2;
+}
+
+.tweet-actions .like-icon:hover {
+    fill: #EF1C5C;
+}
+
+.tweet-actions .retweet-icon:hover {
+    fill: #0CB245;
+}
+
+.tweet-actions .statistics-icon:hover {
+    fill: #1DA1F2;
+}
+
+.tweet-actions p {
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18.75px;
+    color: #536471;
+}
+
+/* Tweet Options */
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-left: 1.25rem;
+    padding-right: 1.563rem;
+    padding-top: 1.313rem;
+}
+
+
+/* Dropdown Button */
+.options-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.options-btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.options-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.options-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.options-dropdown:hover .options-content {
+    display: block;
+}
+
+.options-content a:hover {
+    background-color: #ddd;
+}

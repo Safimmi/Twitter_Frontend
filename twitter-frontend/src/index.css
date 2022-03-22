@@ -26,6 +26,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 } */
 
+button{
+  background-color: transparent;
+}
+
 *{
 	margin: 0;
 	padding: 0;

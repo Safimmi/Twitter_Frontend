@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Footer from '../Components/LoginSignup/Footer/Footer'
 import LoginForm from '../Components/LoginSignup/LoginForm/LoginForm'
 
-
+import BgImage from '../Assets/Images/back-twitter.png'
 import "./Styles/Registry.css"
 
 export default class Login extends Component {
@@ -15,7 +15,7 @@ export default class Login extends Component {
             <div className='registry-wrap'>
 
                 <div className='side-image'>
-                    <img src={require("../Assets/Images/back-twitter.png")} alt="back-twitter"></img> 
+                    <img src={BgImage} alt="back-twitter"></img> 
                 </div>
 
                 <div className='registry-form-wrap'>

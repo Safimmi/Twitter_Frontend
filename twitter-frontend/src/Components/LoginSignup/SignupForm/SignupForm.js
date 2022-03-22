@@ -3,7 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from "react-router-dom"
 
-import logo from '../../../Assets/Logo/twitter-logo-4.svg'
+import logo from '../../../Assets/Logo/twitter-logo.svg'
 import { Link } from 'react-router-dom'
 
 import './SignupForm.css'

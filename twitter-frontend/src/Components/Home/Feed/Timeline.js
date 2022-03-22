@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { withRouter } from 'react-router-dom/cjs/react-router-dom.min'
 
+import Tweet from '../Tweet/Tweet'
+
 
 class Timeline extends Component {
     
@@ -43,15 +45,9 @@ class Timeline extends Component {
         return (
             <div>
                 <h2>New user component : List of twets</h2>
-                {tweets.map(tweet => 
-                    <div>
-                        <p>{tweet.id}</p>
-                        <p>{tweet.user.name}</p>
-                        <p>{tweet.user.username}</p>
-                        <p>{tweet.text}</p>
-                        <p>{tweet.image}</p>
-                        {/* <img src={tweet.image} alt="Image not found"></img> */}
-                        <br />
+                {tweets.map((tweet) => 
+                    <div key = {tweet.id}>
+                        <Tweet tweet={tweet}/>
                     </div>
                 )}
             </div>

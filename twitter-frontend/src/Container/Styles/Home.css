@@ -1,0 +1,29 @@
+/* Panels */
+.home-container{
+    display: flex;
+}
+
+.user-sidepanel{
+    width: 22%;
+    height: 100vh;
+    
+    top: 0; 
+    position: sticky;
+
+    background-color: tomato;
+}
+
+.timeline-mainpanel{
+    width: 48%;
+    background-color: paleturquoise;
+}
+
+.search-sidepanel{
+    width: 30%;
+    height: 100vh;
+    
+    top: 0; 
+    position: sticky;
+    
+    background-color: palegreen;
+}

@@ -6,22 +6,37 @@ import GetTweetIdForm from '../Components/Home/Feed/GetTweetIdForm'
 
 import Timeline from '../Components/Home/Feed/Timeline'
 import LogoutButton from '../Components/LoginSignup/Logout/LogoutButton'
+
+import './Styles/Home.css'
+
 export default class Home extends Component {
     render() {
         return (
-        <div>
+        <div className='home-container'>
 
-            <LogoutButton></LogoutButton>
-            <h1>HOME PAGE</h1>
+            {/* <LogoutButton></LogoutButton> */}
+            {/* <h1>HOME PAGE</h1> */}
+            
+            <div className='user-sidepanel'>
+                USER SIDE PANEL
+            </div>
 
-            <Timeline></Timeline>
-            <br />
+            <div className='timeline-mainpanel'>
+                <Timeline></Timeline>
+                <br />
+                <NewTweetForm></NewTweetForm>
+                <br />
+                <UpdateTweetFrom></UpdateTweetFrom>
+                <br />
+                <GetTweetIdForm></GetTweetIdForm>
+            </div>
+            
+            <div className='search-sidepanel'>
+                SEARCH PANEL
+            </div>
 
-            <NewTweetForm></NewTweetForm>
-            <br />
-            <UpdateTweetFrom></UpdateTweetFrom>
-            <br />
-            <GetTweetIdForm></GetTweetIdForm>
+            
+            
         </div>
         
         )
