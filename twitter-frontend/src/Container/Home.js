@@ -10,6 +10,9 @@ import LogoutButton from '../Components/LoginSignup/Logout/LogoutButton'
 import './Styles/Home.css'
 
 export default class Home extends Component {
+
+    
+
     render() {
         return (
         <div className='home-container'>

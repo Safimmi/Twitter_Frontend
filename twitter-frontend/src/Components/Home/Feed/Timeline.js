@@ -9,12 +9,20 @@ class Timeline extends Component {
     
     constructor(props) {
         super(props)
-        
+
         this.state = {
-            tweets: []
+            tweets: [],
+            reload: false
         }
     }
 
+    findCookieValue(key){
+        return document.cookie
+        .split('; ')
+        .find(row => row.startsWith(key + '='))
+        .split('=')[1]
+    }
+    
     componentDidMount(){
 
         axios({
@@ -47,7 +55,10 @@ class Timeline extends Component {
                 <h2>New user component : List of twets</h2>
                 {tweets.map((tweet) => 
                     <div key = {tweet.id}>
-                        <Tweet tweet={tweet}/>
+                        <Tweet 
+                            tweet={tweet} 
+                            activeUserId={this.findCookieValue("USERID")}
+                        />
                     </div>
                 )}
             </div>

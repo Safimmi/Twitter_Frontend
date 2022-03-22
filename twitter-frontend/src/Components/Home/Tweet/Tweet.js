@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { Cookies, useCookies } from 'react-cookie'
+import axios from 'axios'
 
 import {ReactComponent as CommentIcon} from '../../../Assets/Icons/comment_icon.svg'
 import {ReactComponent as LikeIcon} from '../../../Assets/Icons/like_icon.svg'
@@ -12,16 +14,71 @@ import ProfilePic from '../../../Assets/Images/default_profile_pic.png'
 
 import './Tweet.css'
 
-const Tweet = ({tweet}) => {
+const Tweet = ({tweet, activeUserId}) => {
 
     //console.log(tweet)
     const now = Date.now();
     const tweetDate = tweet.lastModifiedAt;
+    
+    const [tweetId, setTweetId] = useState(tweet.id);
     const [imageState, setImageState] = useState(true);
+    const [likeCount, setLikeCount] = useState(tweet.favoriteCount);
+
+    const [isLiked, setIsLiked] = useState(false);
 
     useEffect(() => {
         if(tweet.image == null){setImageState(false)}
+        if(tweet.favoriteCount != 0 && (tweet.favorites != null && tweet.favorites.includes(activeUserId))){setIsLiked(true)}
     });
+
+    console.log("BODY",isLiked)
+
+    const handleClickLike = (e) =>{
+        e.preventDefault()
+        console.log("INTO", isLiked)
+        if(isLiked === false){
+            axios({
+                url: window.apiPath + "/favorites/create",
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                withCredentials: true,
+                params: {tweetId}
+            })
+            .then(response => {
+                //console.log(response)    
+                setLikeCount(response.data.tweetDto.favoriteCount) 
+                setIsLiked(true)      
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+        }
+        else{
+            console.log("HELLO")
+            axios({
+                url: window.apiPath + "/favorites/destroy",
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                withCredentials: true,
+                params: {tweetId}
+            })
+            .then(response => {
+                //console.log(response)
+                setLikeCount(response.data.tweetDto.favoriteCount)             
+                setIsLiked(false)    
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+        }
+        
+        console.log("OUT",isLiked)
+        
+    }
 
     return (
         <div className='tweet-container'>
@@ -53,9 +110,9 @@ const Tweet = ({tweet}) => {
                 <div className='tweet-actions'>
                     <CommentIcon className='tweet-action-icon comment-icon'/>  
                     
-                    <button className='tweet-actions-btn'>  
-                        <LikeIcon className='tweet-action-icon like-icon'/> 
-                        <p>{tweet.favoriteCount}</p>
+                    <button className='tweet-actions-btn' onClick={handleClickLike}>  
+                        <LikeIcon className='tweet-action-icon like-icon' style={{fill: isLiked ? '#EF1C5C' : '#536471' }} /> 
+                        <p style={{color: isLiked ? '#EF1C5C' : '#536471' }} >{likeCount}</p>
                     </button>
                     
                     <RetweetIcon className='tweet-action-icon retweet-icon'/> 
