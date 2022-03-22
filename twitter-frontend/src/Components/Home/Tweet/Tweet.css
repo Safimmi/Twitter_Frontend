@@ -6,22 +6,18 @@
     border: 1.5px solid #E6E6E6;
 }
 
-/* profile-picture */
+/* Profile picture */
 
-.profile-picture{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.tweet-container .profile-picture img{
+    height: 3.75rem;
+    width: 3.75rem;
+}
 
+.tweet-container  .profile-picture{
     padding-left: 1.563rem;
     padding-right: 0.938rem;
 }
 
-.profile-picture img{
-    height: 3.75rem;
-    width: 3.75rem;
-    border-radius: 50%;
-}
 
 /* Tweet Content */
 

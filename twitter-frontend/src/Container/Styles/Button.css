@@ -1,0 +1,32 @@
+/* Button */
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 3.75rem;
+    
+    border-radius: 4.75rem;
+    
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.94px;
+    color: #FFFFFF;
+}
+
+.signup-button,
+.login-button,
+.tweet-button {
+    background: #1da1f2;
+    transition: all .2s ease;
+}
+
+.signup-button:hover,
+.login-button:hover,
+.tweet-button:hover {
+    background: #32b1ff;
+}

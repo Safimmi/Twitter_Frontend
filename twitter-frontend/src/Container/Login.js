@@ -5,6 +5,7 @@ import LoginForm from '../Components/LoginSignup/LoginForm/LoginForm'
 
 import BgImage from '../Assets/Images/back-twitter.png'
 import "./Styles/Registry.css"
+import './Styles/Button.css'
 
 export default class Login extends Component {
 

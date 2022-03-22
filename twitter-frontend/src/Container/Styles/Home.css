@@ -10,7 +10,6 @@
     top: 0; 
     position: sticky;
 
-    background-color: tomato;
 }
 
 .timeline-mainpanel{
@@ -26,4 +25,16 @@
     position: sticky;
     
     background-color: palegreen;
+}
+
+/* profile-picture */
+
+.profile-picture{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-picture img{
+    border-radius: 50%;
 }

@@ -31,11 +31,9 @@ const Tweet = ({tweet, activeUserId}) => {
         if(tweet.favoriteCount != 0 && (tweet.favorites != null && tweet.favorites.includes(activeUserId))){setIsLiked(true)}
     });
 
-    console.log("BODY",isLiked)
 
     const handleClickLike = (e) =>{
         e.preventDefault()
-        console.log("INTO", isLiked)
         if(isLiked === false){
             axios({
                 url: window.apiPath + "/favorites/create",
@@ -56,7 +54,6 @@ const Tweet = ({tweet, activeUserId}) => {
             })
         }
         else{
-            console.log("HELLO")
             axios({
                 url: window.apiPath + "/favorites/destroy",
                 method: 'POST',
@@ -75,8 +72,6 @@ const Tweet = ({tweet, activeUserId}) => {
                 console.log(err.message)
             })
         }
-        
-        console.log("OUT",isLiked)
         
     }
 

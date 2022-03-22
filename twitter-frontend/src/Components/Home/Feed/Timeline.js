@@ -22,7 +22,14 @@ class Timeline extends Component {
         .find(row => row.startsWith(key + '='))
         .split('=')[1]
     }
-    
+
+    findCookieValue(key){
+        return document.cookie
+        .split('; ')
+        .find(row => row.startsWith(key + '='))
+        .split('=')[1]
+    }
+
     componentDidMount(){
 
         axios({
@@ -57,7 +64,7 @@ class Timeline extends Component {
                     <div key = {tweet.id}>
                         <Tweet 
                             tweet={tweet} 
-                            activeUserId={this.findCookieValue("USERID")}
+                            activeUserId= {this.findCookieValue("USERID")}
                         />
                     </div>
                 )}

@@ -1,0 +1,60 @@
+.user-side-panel{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 8.75rem;
+    padding-right: 2.375rem;
+}
+
+.user-side-panel .side-logo{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 1.938rem;
+    padding-bottom: 3.208rem;
+}
+
+.user-side-panel .side-logo img{
+    width: 2.5rem;
+    height: auto;
+}
+
+.user-side-panel .user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.308rem;
+    width: 100%;
+    margin-bottom: 2.219rem;
+}
+
+.user-side-panel .user-menu a,
+.user-side-panel .user-menu Link{
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.09px;
+    color: #000000;
+}
+
+.user-menu .user-menu-icon{
+    height: 1.619rem;
+    width: auto;
+    fill: #536471;
+}
+
+.side-panel-button{
+    width: 100%;
+}
+
+.tweet-button {
+    margin-top: 0.563rem;
+    margin-bottom:3.063rem;
+}
+
+.user-tag-container{
+    width: 100%;
+}
+
+
+
