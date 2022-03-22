@@ -6,12 +6,16 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div className='header'>
+        <div className='header-container'>
 
-            <h2>Home</h2>
-            <button className='top-btn'>
-                <TopIcon className='top-btn-icon'></TopIcon>
-            </button>
+            <div className='header-wrap'>
+
+                <h2>Home</h2>
+                <button className='top-btn'>
+                    <TopIcon className='top-btn-icon'></TopIcon>
+                </button>
+
+            </div>
 
         </div>
     )

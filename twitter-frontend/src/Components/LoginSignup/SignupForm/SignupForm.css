@@ -49,3 +49,27 @@
     color: #1E97E1;
 }
 
+
+@media(max-width: 820px){
+
+    .signup-form img {
+        align-self: flex-start;
+    }
+
+    .signup-form form {
+        height: 80%;
+        margin: 0;
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
+    }
+
+    .signup-form .policy {
+        width: 100%;
+    }
+
+    .signup-button {
+        margin-top: 0;
+        margin-bottom: 1.875rem;
+    }
+}
+

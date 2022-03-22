@@ -4,7 +4,6 @@ import NewTweetForm from '../Components/Home/NewTweetForm/NewTweetForm'
 import UpdateTweetFrom from '../Components/Home/UpdateTweetForm/UpdateTweetForm'
 
 import Timeline from '../Components/Home/Feed/Timeline'
-import LogoutButton from '../Components/LoginSignup/Logout/LogoutButton'
 import UserSidePanel from '../Components/Home/UserSidePanel/UserSidePanel'
 import Header from '../Components/Home/Header/Header'
 
@@ -24,12 +23,11 @@ export default class Home extends Component {
             <div className='timeline-mainpanel'>
                 <Header></Header>
                 <NewTweetForm></NewTweetForm>
-                {/* <UpdateTweetFrom></UpdateTweetFrom> */}
                 <Timeline></Timeline>         
             </div>
             
             <div className='search-sidepanel'>
-                SEARCH PANEL
+                
             </div>
 
             

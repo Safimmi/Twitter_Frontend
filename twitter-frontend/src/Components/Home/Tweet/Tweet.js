@@ -11,7 +11,7 @@ import {ReactComponent as StatisticsIcon} from '../../../Assets/Icons/statistics
 import {ReactComponent as OptionsIcon} from '../../../Assets/Icons/options_icon.svg'
 
 import ProfilePic from '../../../Assets/Images/default_profile_pic.png'
-
+import '../../../Container/Styles/Dropdown.css'
 import './Tweet.css'
 
 const Tweet = ({tweet, activeUserId}) => {

@@ -1,0 +1,42 @@
+/* Dropdown Button */
+.options-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.options-btn {
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+
+.options-content {
+    display: none;
+    position: absolute;
+    background-color: #f3f3f3;
+    border-radius: 6%;
+    min-width: 10rem;
+    z-index: 1;
+}
+
+.options-content a {
+    color: black;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    border-radius: 6%;
+    display: block;
+}
+
+.options-dropdown:hover .options-content {
+    display: block;
+}
+
+.options-content a:hover {
+    background-color: #e4e4e4;
+}
+
+.options-btn .tweet-action-icon{
+    height: 1.234rem;
+    width: auto;
+    stroke: #536471;
+}

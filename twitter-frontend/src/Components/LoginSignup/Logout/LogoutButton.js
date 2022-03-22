@@ -3,6 +3,9 @@ import axios from 'axios'
 import { Cookies, useCookies } from 'react-cookie'
 import { useHistory } from "react-router-dom"
 
+import '../../../Container/Styles/Dropdown.css'
+import './LogoutButton.css'
+
 const LogoutButton = () => {
 
     const history = useHistory();
@@ -20,11 +23,10 @@ const LogoutButton = () => {
         })
         .then(response => {
             console.log(response)
-            history.push('/')
+            history.push('/login')
             //console.log(document.cookie)
             //document.cookie = "JSESSIONID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             //document.cookie = "USERID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-            
         })
         .catch(err => {
             console.log(err.message)
@@ -34,10 +36,8 @@ const LogoutButton = () => {
     }
 
     return (
-        <div>
-            <div>
-                <button onClick={handleClick}>Logout</button>
-            </div>
+        <div className='option-logout'>
+            <a onClick={handleClick}>Logout</a>
         </div>
     )
 }

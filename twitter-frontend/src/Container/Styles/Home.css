@@ -22,8 +22,6 @@
     
     top: 0; 
     position: sticky;
-    
-    background-color: palegreen;
 }
 
 /* profile-picture */
@@ -37,3 +35,4 @@
 .profile-picture img{
     border-radius: 50%;
 }
+

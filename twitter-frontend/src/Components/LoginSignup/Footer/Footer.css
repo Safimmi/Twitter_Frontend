@@ -24,3 +24,9 @@
 .footer a:hover {
     border-bottom: 1px solid #000000;
 }
+
+@media(max-width: 580px){
+    .footer{
+        display: none;
+    }
+}

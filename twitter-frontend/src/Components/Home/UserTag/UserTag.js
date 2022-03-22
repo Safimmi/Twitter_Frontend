@@ -3,9 +3,13 @@ import { useState, useEffect } from 'react'
 import { Cookies, useCookies } from 'react-cookie'
 import axios from 'axios'
 
+import {ReactComponent as OptionsIcon} from '../../../Assets/Icons/options_icon.svg'
+import LogoutButton from '../../LoginSignup/Logout/LogoutButton'
 
 import ProfilePic from '../../../Assets/Images/default_profile_pic.png'
 import './UserTag.css'
+import '../../../Container/Styles/Dropdown.css'
+
 
 const UserTag = () => {
     
@@ -20,6 +24,8 @@ const UserTag = () => {
         .split('=')[1]
     }
 
+    const handleLogOut = (e) => {}
+    
     useEffect(() => {
         setActiveUserId(findCookieValue("USERID"))
         console.log(id);
@@ -42,6 +48,7 @@ const UserTag = () => {
             console.log(err.message)
         })
     });
+    
 
     return (
         <div className='usertag-wrap'>
@@ -54,6 +61,18 @@ const UserTag = () => {
                 <h3>{name}</h3>
                 <h4>@{username}</h4>
             </div>
+
+            <div className='options'>
+                <div className='options-dropdown'>
+                    <button className="options-btn">
+                        <OptionsIcon className='tweet-action-icon'/>
+                    </button>
+                    <div className="options-content">
+                        <LogoutButton></LogoutButton>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }

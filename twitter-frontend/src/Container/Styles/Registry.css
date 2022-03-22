@@ -95,6 +95,15 @@ img {
     
 }
 
+@media(max-width: 820px){
+    .side-image{
+        display: none;
+    }
+    .registry-form-wrap{
+        width: 100vw;
+    }
+}
+
 
 
 
