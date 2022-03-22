@@ -9,7 +9,6 @@
 .registry-wrap{
     display: flex;
     height: 95.5vh;
-    /* background-color: tomato; */
 }
 
 .side-image{
@@ -35,7 +34,6 @@ img {
     display: flex;
     justify-content: center;
     width: 100%;
-    /* background-color: palevioletred; */
 }
 
 .signup-form form,
@@ -43,8 +41,6 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* background-color: paleturquoise; */
 }
 
 .signup-form img, 
@@ -64,13 +60,11 @@ img {
     
     margin-bottom: 2.188rem;
     align-self: flex-start;
-    /* background-color: papayawhip; */
 }
 
 .signup-form form div,
 .login-form form div{
     width: 100%;
-    /* background-color: peachpuff; */
 }
 .signup-form input,
 .login-form input{
@@ -100,7 +94,6 @@ img {
     text-indent: 20px;
     
 }
-
 
 
 

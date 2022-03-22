@@ -20,13 +20,15 @@
 
 .signup-button,
 .login-button,
-.tweet-button {
+.tweet-button ,
+.newtweet-button{
     background: #1da1f2;
     transition: all .2s ease;
 }
 
 .signup-button:hover,
 .login-button:hover,
-.tweet-button:hover {
+.tweet-button:hover,
+.newtweet-button:hover {
     background: #32b1ff;
 }

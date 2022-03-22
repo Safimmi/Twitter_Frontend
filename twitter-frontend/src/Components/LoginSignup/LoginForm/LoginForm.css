@@ -34,7 +34,6 @@
 .login-links{
     display: flex;
     justify-content: space-between;
-    /* background-color: brown; */
 }
 
 .login-links a,

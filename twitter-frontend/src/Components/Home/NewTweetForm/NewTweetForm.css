@@ -1,0 +1,81 @@
+.newtweet-wrap{
+    display: flex;
+    width: 100%;
+    padding-top: 1.875rem;
+    border: 1.5px solid #E6E6E6;
+}
+
+/* Profile picture */
+
+.newtweet-wrap .profile-picture img{
+    height: 3.75rem;
+    width: 3.75rem;
+}
+
+.newtweet-wrap  .profile-picture{
+    padding-left: 1.563rem;
+    padding-right: 0.938rem;
+}
+
+/*Form*/
+
+.newtweet-wrap form{
+    width: 100%;
+    padding-right: 1.313rem;
+}
+
+.form-input{
+    width:  100%;
+}
+
+.newtweet-wrap input {
+    width:200px;
+    resize:none;
+    overflow:hidden;
+    height:1.1em;
+}
+
+.newtweet-wrap input[type='text'] {
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 29.26px;
+    color: #828282;
+
+    width: 100%;
+    height: 5rem;
+    border: none;
+}
+
+.newtweet-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.938rem;
+    margin-bottom: 0.938rem;
+}
+
+.form-bottom{
+    width: 35%;
+}
+
+
+/* Options */
+
+.newtweet-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newtweet-options{
+    display: flex;
+    align-items: center;
+    gap: 1.438rem;
+}
+
+.newtweet-options .newtweet-option-icon{
+    height: 1.25rem;
+    width: auto;
+}

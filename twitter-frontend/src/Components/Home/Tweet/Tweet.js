@@ -27,10 +27,10 @@ const Tweet = ({tweet, activeUserId}) => {
     const [isLiked, setIsLiked] = useState(false);
 
     useEffect(() => {
-        if(tweet.image == null){setImageState(false)}
+        if(tweet.image == null || tweet.image == ''){setImageState(false)} 
+            else{setImageState(true)}
         if(tweet.favoriteCount != 0 && (tweet.favorites != null && tweet.favorites.includes(activeUserId))){setIsLiked(true)}
     });
-
 
     const handleClickLike = (e) =>{
         e.preventDefault()
@@ -123,13 +123,11 @@ const Tweet = ({tweet, activeUserId}) => {
                         <OptionsIcon className='tweet-action-icon'/>
                     </button>
                     <div className="options-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="#">Delete</a>
+                        <a href="#">Edit</a>
                     </div>
                 </div>
             </div>
-            
             
         </div>
     )

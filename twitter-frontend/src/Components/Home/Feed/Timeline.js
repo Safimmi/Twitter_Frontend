@@ -59,7 +59,6 @@ class Timeline extends Component {
 
         return (
             <div>
-                <h2>New user component : List of twets</h2>
                 {tweets.map((tweet) => 
                     <div key = {tweet.id}>
                         <Tweet 

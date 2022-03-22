@@ -7,7 +7,7 @@ import axios from 'axios'
 import ProfilePic from '../../../Assets/Images/default_profile_pic.png'
 import './UserTag.css'
 
-const UserTag = (props) => {
+const UserTag = () => {
     
     const [id, setActiveUserId] = useState('');
     const [name, setName] = useState('');

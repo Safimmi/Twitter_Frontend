@@ -1,0 +1,24 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid #E6E6E6;
+    padding: 1.25rem;
+}
+
+.header h2{
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31.92px;
+    color: #000000;
+}
+
+.top-btn-icon {
+    height: 1.406rem;
+    width: auto;
+    fill: #000000;
+}
+
+
+
